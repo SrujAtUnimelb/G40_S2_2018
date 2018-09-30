@@ -12,7 +12,7 @@
         <!--User Feed-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="UserFeed" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kc3-od-Pl5"/>
                         <viewControllerLayoutGuide type="bottom" id="euM-U5-Jw5"/>
@@ -52,7 +52,7 @@
         <!--Discover-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="Discover" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7lN-QJ-R3e"/>
                         <viewControllerLayoutGuide type="bottom" id="eVe-QF-Rt5"/>
@@ -92,7 +92,7 @@
         <!--Photo-->
         <scene sceneID="8xn-UQ-2zE">
             <objects>
-                <viewController id="PSS-9D-etI" customClass="ThirdViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PSS-9D-etI" customClass="Photo" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9nL-gT-Mc3"/>
                         <viewControllerLayoutGuide type="bottom" id="omP-Rp-JCP"/>

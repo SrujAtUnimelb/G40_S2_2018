@@ -66,20 +66,68 @@
 		AD1D5481215E3CA000D23FE3 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D54AD2160F59C00D23FE3 /* ActivityFeed */,
+				AD1D54AC2160F58B00D23FE3 /* Profile */,
+				AD1D54AB2160F57E00D23FE3 /* Photo */,
+				AD1D54AA2160F56B00D23FE3 /* Discover */,
+				AD1D54A92160F54A00D23FE3 /* UserFeed */,
+				AD1D54A82160F54600D23FE3 /* Login */,
 				AD1D5482215E3CA000D23FE3 /* AppDelegate.swift */,
-				AD1D5484215E3CA000D23FE3 /* UserFeed.swift */,
-				AD1D5486215E3CA000D23FE3 /* Discover.swift */,
-				AD1D5496215E40CC00D23FE3 /* Photo.swift */,
 				AD1D5488215E3CA000D23FE3 /* Main.storyboard */,
 				AD1D548B215E3CA300D23FE3 /* Assets.xcassets */,
 				AD1D548D215E3CA300D23FE3 /* LaunchScreen.storyboard */,
 				AD1D5490215E3CA300D23FE3 /* Info.plist */,
-				AD1D5498215E657300D23FE3 /* ActivityFeed.swift */,
-				AD1D549A215E685E00D23FE3 /* Profile.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		AD1D54A82160F54600D23FE3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				AD1D549C2160BCF500D23FE3 /* SignIn.swift */,
 				AD1D549E2160CF2400D23FE3 /* SignUp.swift */,
 			);
-			path = Instagram;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AD1D54A92160F54A00D23FE3 /* UserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				AD1D5484215E3CA000D23FE3 /* UserFeed.swift */,
+			);
+			path = UserFeed;
+			sourceTree = "<group>";
+		};
+		AD1D54AA2160F56B00D23FE3 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				AD1D5486215E3CA000D23FE3 /* Discover.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		AD1D54AB2160F57E00D23FE3 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				AD1D5496215E40CC00D23FE3 /* Photo.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		AD1D54AC2160F58B00D23FE3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AD1D549A215E685E00D23FE3 /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AD1D54AD2160F59C00D23FE3 /* ActivityFeed */ = {
+			isa = PBXGroup;
+			children = (
+				AD1D5498215E657300D23FE3 /* ActivityFeed.swift */,
+			);
+			path = ActivityFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
