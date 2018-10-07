@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUp: UIViewController {
+class SignUp: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,29 @@ class SignUp: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+   
+    @IBAction func SignInButton(_ sender: Any) {
+        //self.dismiss(animated: true, completion: nil)
+        /*
+        let vcIndex = self.navigationController?.viewControllers.indexOf({ (viewController) -> Bool in
+            
+            if let _ = viewController as? ComposeViewController {
+                return true
+            }
+            return false
+        })
+        
+        let composeVC = self.navigationController?.viewControllers[vcIndex!] as! ComposeViewController
+        
+        self.navigationController?.popToViewController(composeVC, animated: true)
+         */
+        let  vc =  self.navigationController?.viewControllers.filter({$0 is SignIn}).first
+        
+        self.navigationController?.popToViewController(vc!, animated: true)
+        
+    }
+ 
+    
     /*
     // MARK: - Navigation
 
