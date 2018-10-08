@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUp: UIViewController{
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var Password1TextField: UITextField!
+    @IBOutlet weak var Password2TextField: UITextField!
+    @IBOutlet weak var registrationStatusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        registrationStatusLabel.isEnabled = true
+        registrationStatusLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +46,7 @@ class SignUp: UIViewController{
         
         self.navigationController?.popToViewController(composeVC, animated: true)
          */
+        
         let  vc =  self.navigationController?.viewControllers.filter({$0 is SignIn}).first
         
         self.navigationController?.popToViewController(vc!, animated: true)
@@ -44,6 +54,42 @@ class SignUp: UIViewController{
     }
  
     
+    
+    @IBAction func signUpButtonPress(_ sender: Any) {
+        
+        if(Password1TextField.text == Password2TextField.text){
+            
+            print("Calling Firebase Auth with fields \(emailTextField.text!) and \(Password1TextField.text!)")
+            
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: Password1TextField.text!) { (user, error) in
+                
+                if (error != nil){
+                    print(error!)
+                    print(error.debugDescription)
+                    print(error!.localizedDescription)
+                    self.registrationStatusLabel.text = error.debugDescription
+                    self.registrationStatusLabel.isHighlighted = true
+                    self.registrationStatusLabel.isHidden = false
+                } else {
+                    
+                    //TODO Go to next view controller
+                    print("user registered")
+                    
+                    self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
+                    
+                    print(" gone to next view")
+                    
+                    
+                }
+            }
+        } else{
+            
+            registrationStatusLabel.text = "Passwords Mismatch"
+            registrationStatusLabel.isHighlighted = true
+            registrationStatusLabel.isHidden = false
+            
+        }
+    }
     /*
     // MARK: - Navigation
 

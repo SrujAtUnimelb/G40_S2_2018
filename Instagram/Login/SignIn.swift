@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignIn: UIViewController {
 
@@ -21,6 +22,19 @@ class SignIn: UIViewController {
     }
 
     @IBAction func SignInButton(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: _username.text!, password: _password.text!) { (user, error) in
+            if(error != nil){
+                print(error!)
+            }else {
+                print("User logged in")
+                
+                 self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
+                
+                
+            }
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

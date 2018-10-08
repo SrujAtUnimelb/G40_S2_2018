@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Connecting App to Firebase
+        
+        FirebaseApp.configure()
+        
+        let myDBFirebase = Database.database().reference()
+        
+        myDBFirebase.setValue("Commit first data line into Firebase DB - SV")
         
         
         return true
