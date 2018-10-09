@@ -19,6 +19,7 @@
 		AD1D549B215E685E00D23FE3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D549A215E685E00D23FE3 /* Profile.swift */; };
 		AD1D549D2160BCF500D23FE3 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D549C2160BCF500D23FE3 /* SignIn.swift */; };
 		AD1D549F2160CF2400D23FE3 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D549E2160CF2400D23FE3 /* SignUp.swift */; };
+		ADB313E3216C9E9500868ADF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB313E2216C9E9500868ADF /* TabBar.swift */; };
 		FD523A8AC583FF62C7DAED4A /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BDCA276BBCA08E05A10F99 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		AD1D549A215E685E00D23FE3 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		AD1D549C2160BCF500D23FE3 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		AD1D549E2160CF2400D23FE3 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		ADB313E2216C9E9500868ADF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		AD1D5481215E3CA000D23FE3 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				ADB313E1216C9E4400868ADF /* TabBar */,
 				AD1D54AD2160F59C00D23FE3 /* ActivityFeed */,
 				AD1D54AC2160F58B00D23FE3 /* Profile */,
 				AD1D54AB2160F57E00D23FE3 /* Photo */,
@@ -155,6 +158,14 @@
 				AD1D5498215E657300D23FE3 /* ActivityFeed.swift */,
 			);
 			path = ActivityFeed;
+			sourceTree = "<group>";
+		};
+		ADB313E1216C9E4400868ADF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ADB313E2216C9E9500868ADF /* TabBar.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,15 +243,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Instagram-checkManifestLockResult.txt",
 			);
@@ -254,8 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
@@ -266,8 +271,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB313E3216C9E9500868ADF /* TabBar.swift in Sources */,
 				AD1D5499215E657300D23FE3 /* ActivityFeed.swift in Sources */,
 				AD1D549B215E685E00D23FE3 /* Profile.swift in Sources */,
 				AD1D5487215E3CA000D23FE3 /* Discover.swift in Sources */,

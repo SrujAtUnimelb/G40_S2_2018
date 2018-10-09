@@ -17,11 +17,12 @@ class SignIn: UIViewController {
     @IBOutlet weak var _username: UITextField!
     @IBOutlet weak var loginStatusLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loginStatusLabel.isHidden = true
-
+        loginStatusLabel.isEnabled = true
         // Do any additional setup after loading the view.
     }
 
@@ -36,13 +37,17 @@ class SignIn: UIViewController {
                 
                 self.loginStatusLabel.text = error?.localizedDescription
                 self.loginStatusLabel.isHighlighted = true
-                self.loginStatusLabel.isHidden = true
+                self.loginStatusLabel.isHidden = false
                 
             } else {
                 print("User logged in")
                 
-                 self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.login()
                 
+                
+                 //self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
+                //self.dismiss(animated: true, completion: nil)
                 
             }
         }

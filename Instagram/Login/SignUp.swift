@@ -32,20 +32,7 @@ class SignUp: UIViewController{
     
    
     @IBAction func SignInButton(_ sender: Any) {
-        //self.dismiss(animated: true, completion: nil)
-        /*
-        let vcIndex = self.navigationController?.viewControllers.indexOf({ (viewController) -> Bool in
-            
-            if let _ = viewController as? ComposeViewController {
-                return true
-            }
-            return false
-        })
         
-        let composeVC = self.navigationController?.viewControllers[vcIndex!] as! ComposeViewController
-        
-        self.navigationController?.popToViewController(composeVC, animated: true)
-         */
         
         let  vc =  self.navigationController?.viewControllers.filter({$0 is SignIn}).first
         
@@ -75,7 +62,11 @@ class SignUp: UIViewController{
                     //TODO Go to next view controller
                     print("user registered")
                     
-                    self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
+                    //Back to SignIn when registered succeeded.
+                    let  vc =  self.navigationController?.viewControllers.filter({$0 is SignIn}).first
+                    
+                    self.navigationController?.popToViewController(vc!, animated: true)
+                    //self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
                     
                     print(" gone to next view")
                     
