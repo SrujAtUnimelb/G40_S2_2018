@@ -62,13 +62,21 @@ class SignUp: UIViewController{
                     //TODO Go to next view controller
                     print("user registered")
                     
+                    self.registrationStatusLabel.text = "Registration Succeeded, returning to Sign In page."
+                    
+                    self.registrationStatusLabel.isHighlighted = true
+                    self.registrationStatusLabel.isHidden = false
+                    
+                    //Freeze for 3 seconds.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) { // change 2 to desired number of seconds
+                        let  vc =  self.navigationController?.viewControllers.filter({$0 is SignIn}).first
+                        self.navigationController?.popToViewController(vc!, animated: true)
+                    }
                     //Back to SignIn when registered succeeded.
-                    let  vc =  self.navigationController?.viewControllers.filter({$0 is SignIn}).first
                     
-                    self.navigationController?.popToViewController(vc!, animated: true)
-                    //self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
+                   
                     
-                    print(" gone to next view")
+                    print("gone to next view")
                     
                     
                 }

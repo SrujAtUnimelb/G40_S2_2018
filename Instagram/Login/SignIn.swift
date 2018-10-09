@@ -16,13 +16,13 @@ class SignIn: UIViewController {
     @IBOutlet weak var _password: UITextField!
     @IBOutlet weak var _username: UITextField!
     @IBOutlet weak var loginStatusLabel: UILabel!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loginStatusLabel.isHidden = true
         loginStatusLabel.isEnabled = true
+    
         // Do any additional setup after loading the view.
     }
 
@@ -42,8 +42,17 @@ class SignIn: UIViewController {
             } else {
                 print("User logged in")
                 
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.login()
+                self.loginStatusLabel.text = "Logged In Succeeded!"
+                self.loginStatusLabel.isHighlighted = true
+                self.loginStatusLabel.isHidden = false
+                
+                //Freeze for 2 seconds.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // change 2 to desired number of seconds
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.login()
+                }
+                
+                
                 
                 
                  //self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
@@ -62,7 +71,7 @@ class SignIn: UIViewController {
 
     /*
     // MARK: - Navigation
-
+badly formatted
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
