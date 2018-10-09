@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class Photo: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
