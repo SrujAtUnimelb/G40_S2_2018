@@ -67,7 +67,7 @@ class SignUp: UIViewController{
                     print(error!)
                     print(error.debugDescription)
                     print(error!.localizedDescription)
-                    self.registrationStatusLabel.text = error.debugDescription
+                    self.registrationStatusLabel.text = error?.localizedDescription
                     self.registrationStatusLabel.isHighlighted = true
                     self.registrationStatusLabel.isHidden = false
                 } else {
