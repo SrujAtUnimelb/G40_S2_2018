@@ -54,12 +54,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-extension AppDelegate{
-    
-    func login(){
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let myTabBar = storyboard.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
-            window?.rootViewController = myTabBar
-        }
-}
+
