@@ -15,6 +15,7 @@ class Photo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("Photo class loaded.. ")
         // Do any additional setup after loading the view.
     }
 

@@ -9,11 +9,26 @@
 import UIKit
 
 class TabBar: UITabBarController {
+    
+    var tabBarItem3 = UITabBarItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       
+        // For testing - directly going to third view
+        
+        self.selectedIndex = 2
+        
+        if(self.selectedIndex == 2){
+         
+        tabBarItem3 = self.tabBar.items![2]
+            _ = Photo()
+            
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
