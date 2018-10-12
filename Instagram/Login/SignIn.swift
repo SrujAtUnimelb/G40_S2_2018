@@ -16,6 +16,8 @@ class SignIn: UIViewController {
     @IBOutlet weak var _password: UITextField!
     @IBOutlet weak var _username: UITextField!
     @IBOutlet weak var loginStatusLabel: UILabel!
+    
+    var window: UIWindow?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,14 @@ class SignIn: UIViewController {
         loginStatusLabel.isHidden = true
         loginStatusLabel.isEnabled = true
     
-        // Do any additional setup after loading the view.
+        //Do any additional setup after loading the view.
+        
+        //Memorize logged in user and save in App memory
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.switchToHome()
+            }
+    }
     }
 
     @IBAction func SignInButton(_ sender: Any) {
@@ -33,30 +42,24 @@ class SignIn: UIViewController {
                 print(error!)
                 print(error.debugDescription)
                 print("ERROR - \(error!.localizedDescription)")
-                
+            
                 
                 self.loginStatusLabel.text = error?.localizedDescription
                 self.loginStatusLabel.isHighlighted = true
                 self.loginStatusLabel.isHidden = false
                 
             } else {
-                print("User logged in")
                 
+                
+                print("User logged in")
                 self.loginStatusLabel.text = "Logged In Succeeded!"
                 self.loginStatusLabel.isHighlighted = true
                 self.loginStatusLabel.isHidden = false
                 
                 //Freeze for 2 seconds.
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // change 2 to desired number of seconds
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.login()
+                    self.switchToHome()
                 }
-                
-                
-                
-                
-                 //self.performSegue(withIdentifier: "goToFirstTabView", sender: self)
-                //self.dismiss(animated: true, completion: nil)
                 
             }
         }
@@ -68,7 +71,11 @@ class SignIn: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func switchToHome() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let myTabBar = storyboard.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
+        self.present(myTabBar, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 badly formatted
