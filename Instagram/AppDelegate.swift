@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        let myDBFirebase = Database.database().reference()
+        //let myDBFirebase = Database.database().reference()
         
-        myDBFirebase.setValue("Commit first data line into Firebase DB - SV")
+       // myDBFirebase.setValue("Commit first data line into Firebase DB - SV")
         
         
         return true

@@ -19,14 +19,14 @@ class TabBar: UITabBarController {
        
         // For testing - directly going to third view
         
-        self.selectedIndex = 2
-        
-        if(self.selectedIndex == 2){
-         
-        tabBarItem3 = self.tabBar.items![2]
-            _ = Photo()
-            
-        }
+//        self.selectedIndex = 2
+//
+//        if(self.selectedIndex == 2){
+//
+//        tabBarItem3 = self.tabBar.items![2]
+//            _ = Photo()
+//
+//        }
         
         
     }

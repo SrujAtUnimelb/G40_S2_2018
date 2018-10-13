@@ -28,11 +28,11 @@ class SignIn: UIViewController {
         //Do any additional setup after loading the view.
         
         //Memorize logged in user and save in App memory
-        Auth.auth().addStateDidChangeListener() { auth, user in
-            if user != nil {
-                self.switchToHome()
-            }
-    }
+//        Auth.auth().addStateDidChangeListener() { auth, user in
+//            if user != nil {
+//                self.switchToHome()
+//            }
+//    }
     }
 
     @IBAction func SignInButton(_ sender: Any) {
