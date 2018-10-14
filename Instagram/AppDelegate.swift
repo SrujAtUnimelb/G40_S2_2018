@@ -21,11 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        //let myDBFirebase = Database.database().reference()
+        //Enables offline mode - Uncomment when needed
         
-       // myDBFirebase.setValue("Commit first data line into Firebase DB - SV")
-        
-        
+        //Database.database().isPersistenceEnabled = true
+
         return true
     }
 

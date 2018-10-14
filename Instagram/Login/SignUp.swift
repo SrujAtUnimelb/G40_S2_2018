@@ -87,16 +87,33 @@ class SignUp: UIViewController{
                     //TODO Go to next view controller
                     print("user registered")
                     
+                    //Afer user authenticated
                     // Database reference
                     let dbRef: DatabaseReference!
                     dbRef = Database.database().reference()
                     
+                    guard let uidDB = user?.user else{
+                        return
+                    }
+                    
+                    let userRef = dbRef.child("users").child(uidDB.uid)
+                    let valuesArray = ["userEmail": self.emailTextField.text, "userFullname": self.nameField.text]
+                   
               //self.ref.child("users").child(user.uid).setValue(["username": username])
-                    // Neeto FIX this issue
+ 
                     
-                    dbRef.child("users").setValue(["username": self.emailTextField.text])
+                    userRef.updateChildValues(valuesArray as Any as! [AnyHashable : Any], withCompletionBlock: {
+                        (err, ref) in
+                        if err != nil {
+                            print(err as Any)
+                            return
+                        }else {
+                            print("(uidDB.email!) - inserted into FirebaseDB")
+                        }
+                    })
+             
                     
-                    dbRef.child("users").setValue(["fullname": self.nameField.text])
+             
                     
                     self.registrationStatusLabel.text = "Registration Succeeded, returning to Sign In page."
                     

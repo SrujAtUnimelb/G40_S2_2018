@@ -27,10 +27,22 @@ class TabBar: UITabBarController {
 //            _ = Photo()
 //
 //        }
-        
+        navigationController?.isToolbarHidden = false
+        navigationController?.hidesBarsOnTap = false
+        navigationController?.isNavigationBarHidden = false
+        setupNavigationBar()
         
     }
 
+    /*
+     // MARK: - Navigation Bar Setup
+     Add navigation items at the top bar
+     */
+    func setupNavigationBar(){
+        
+        navigationItem.title = "See this works"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
