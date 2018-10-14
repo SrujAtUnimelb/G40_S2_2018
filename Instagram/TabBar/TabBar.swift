@@ -10,7 +10,7 @@ import UIKit
 
 class TabBar: UITabBarController {
     
-    var tabBarItem3 = UITabBarItem()
+    //var tabBarItem3 = UITabBarItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,16 @@ class TabBar: UITabBarController {
 //            _ = Photo()
 //
 //        }
+        navigationController?.isToolbarHidden = false
+        navigationController?.hidesBarsOnTap = false
+        navigationController?.isNavigationBarHidden = false
+        setupNavigationBar()
         
+    }
+    
+    func setupNavigationBar(){
         
+        navigationItem.title = "See this works"
     }
 
     override func didReceiveMemoryWarning() {
