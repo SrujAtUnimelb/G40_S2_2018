@@ -11,19 +11,13 @@ import Firebase
 
 class SignUp: UIViewController{
 
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var Password1TextField: UITextField!
     @IBOutlet weak var Password2TextField: UITextField!
     @IBOutlet weak var registrationStatusLabel: UILabel!
     
-    let profileImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "profile")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +26,6 @@ class SignUp: UIViewController{
         
         registrationStatusLabel.isEnabled = true
         registrationStatusLabel.isHidden = true
-        
-        view.addSubview(profileImageView)
         
         setupProfileImageView()
     }
@@ -44,6 +36,8 @@ class SignUp: UIViewController{
         profileImageView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -200).isActive = true
         
         profileImageView.heightAnchor.constraint(lessThanOrEqualToConstant: 150).isActive = true
+        
+        profileImageView.image = UIImage(named: "shiba")
         
 //        profileImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
@@ -94,9 +88,10 @@ class SignUp: UIViewController{
               //self.ref.child("users").child(user.uid).setValue(["username": username])
                     // Neeto FIX this issue
                     
-                    dbRef.child("users").setValue(["username": self.emailTextField.text])
+                    dbRef.child("users").setValue(["email": self.emailTextField.text])
                     
                     dbRef.child("users").setValue(["fullname": self.nameField.text])
+                    
                     
                     self.registrationStatusLabel.text = "Registration Succeeded, returning to Sign In page."
                     
