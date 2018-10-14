@@ -14,11 +14,19 @@ class UserFeed: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+<<<<<<< HEAD
           navigationController?.isNavigationBarHidden = false
         checkUserLoggedIn()
         
     }
     
+=======
+        navigationController?.isNavigationBarHidden = false
+        checkUserLoggedIn()
+    }
+    
+    //
+>>>>>>> 733fd1e4817121b5da381bb6ff07607faaf9c339
     func checkUserLoggedIn(){
         print("==== Checking for user Login")
         if Auth.auth().currentUser?.uid == nil {
@@ -42,17 +50,28 @@ class UserFeed: UIViewController {
                 let email = value?["userEmail"] as? String ?? ""
                 let fullName = value?["userFullname"] as? String ?? ""
                 
+<<<<<<< HEAD
                 print("userFullName = \(email)")
                   print("userFullName = \(fullName)")
+=======
+                print("userEmail = \(email)")
+                print("userFullName = \(fullName)")
+>>>>>>> 733fd1e4817121b5da381bb6ff07607faaf9c339
                 
                 self.navigationItem.title = fullName
                 
             }) { (error) in
                 print(error.localizedDescription)
             }
+<<<<<<< HEAD
                 
        }
     
+=======
+            
+        }
+        
+>>>>>>> 733fd1e4817121b5da381bb6ff07607faaf9c339
     }
 
     override func didReceiveMemoryWarning() {

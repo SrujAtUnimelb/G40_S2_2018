@@ -10,7 +10,7 @@ import UIKit
 
 class TabBar: UITabBarController {
     
-    var tabBarItem3 = UITabBarItem()
+    //var tabBarItem3 = UITabBarItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,15 @@ class TabBar: UITabBarController {
         navigationController?.hidesBarsOnTap = false
         navigationController?.isNavigationBarHidden = false
         setupNavigationBar()
+<<<<<<< HEAD
+=======
         
+    }
+    
+    func setupNavigationBar(){
+>>>>>>> 733fd1e4817121b5da381bb6ff07607faaf9c339
+        
+        navigationItem.title = "See this works"
     }
 
     /*
