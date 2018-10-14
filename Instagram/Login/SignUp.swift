@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class SignUp: UIViewController{
-
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -22,7 +22,7 @@ class SignUp: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
         
         registrationStatusLabel.isEnabled = true
         registrationStatusLabel.isHidden = true
@@ -35,21 +35,21 @@ class SignUp: UIViewController{
         
         profileImageView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -200).isActive = true
         
-    profileImageView.heightAnchor.constraint(lessThanOrEqualToConstant: 150).isActive = true
+        profileImageView.heightAnchor.constraint(lessThanOrEqualToConstant: 150).isActive = true
         
         profileImageView.image = UIImage(named: "shiba")
         
-//        profileImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //        profileImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-   
+    
     @IBAction func SignInButton(_ sender: Any) {
         
         
@@ -58,7 +58,7 @@ class SignUp: UIViewController{
         self.navigationController?.popToViewController(vc!, animated: true)
         
     }
- 
+    
     
     
     @IBAction func signUpButtonPress(_ sender: Any) {
@@ -81,11 +81,7 @@ class SignUp: UIViewController{
                     //TODO Go to next view controller
                     print("user registered")
                     
-<<<<<<< HEAD
-                    //Afer user authenticated
-=======
                     //After user authenticated
->>>>>>> 733fd1e4817121b5da381bb6ff07607faaf9c339
                     // Database reference
                     let dbRef: DatabaseReference!
                     dbRef = Database.database().reference()
@@ -96,26 +92,8 @@ class SignUp: UIViewController{
                     
                     let userRef = dbRef.child("users").child(uidDB.uid)
                     let valuesArray = ["userEmail": self.emailTextField.text, "userFullname": self.nameField.text]
-<<<<<<< HEAD
-                   
-              //self.ref.child("users").child(user.uid).setValue(["username": username])
- 
                     
-                    userRef.updateChildValues(valuesArray as Any as! [AnyHashable : Any], withCompletionBlock: {
-                        (err, ref) in
-                        if err != nil {
-                            print(err as Any)
-                            return
-                        }else {
-                            print("(uidDB.email!) - inserted into FirebaseDB")
-                        }
-                    })
-             
-                    
-             
-=======
-                    
-              //self.ref.child("users").child(user.uid).setValue(["username": username])
+                    //self.ref.child("users").child(user.uid).setValue(["username": username])
                     
                     
                     userRef.updateChildValues(valuesArray as Any as! [AnyHashable : Any], withCompletionBlock: {
@@ -129,7 +107,6 @@ class SignUp: UIViewController{
                     })
                     
                     
->>>>>>> 733fd1e4817121b5da381bb6ff07607faaf9c339
                     
                     self.registrationStatusLabel.text = "Registration Succeeded, returning to Sign In page."
                     
@@ -143,7 +120,7 @@ class SignUp: UIViewController{
                     }
                     //Back to SignIn when registered succeeded.
                     
-                   
+                    
                     
                     print("gone to next view")
                     
@@ -159,13 +136,13 @@ class SignUp: UIViewController{
         }
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
