@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  instagram_Pro
+//  Instagram_Pro
 //
 //  Created by DAWEIXU on 2018/10/15.
 //  Copyright © 2018 unimelb_daweixu. All rights reserved.
