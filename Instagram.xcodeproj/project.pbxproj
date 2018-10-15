@@ -20,6 +20,9 @@
 		AD1D549D2160BCF500D23FE3 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D549C2160BCF500D23FE3 /* SignIn.swift */; };
 		AD1D549F2160CF2400D23FE3 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1D549E2160CF2400D23FE3 /* SignUp.swift */; };
 		ADB313E3216C9E9500868ADF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB313E2216C9E9500868ADF /* TabBar.swift */; };
+		ADFE51B321741DC90000D925 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51B221741DC90000D925 /* ImageCollectionViewCell.swift */; };
+		ADFE51B52174230E0000D925 /* ImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51B42174230E0000D925 /* ImageFlowLayout.swift */; };
+		ADFE51B7217427CC0000D925 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE51B6217427CC0000D925 /* HeaderCollectionReusableView.swift */; };
 		FD523A8AC583FF62C7DAED4A /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BDCA276BBCA08E05A10F99 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		AD1D549C2160BCF500D23FE3 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		AD1D549E2160CF2400D23FE3 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		ADB313E2216C9E9500868ADF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		ADFE51B221741DC90000D925 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		ADFE51B42174230E0000D925 /* ImageFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFlowLayout.swift; sourceTree = "<group>"; };
+		ADFE51B6217427CC0000D925 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +100,9 @@
 		AD1D5481215E3CA000D23FE3 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D54AC2160F58B00D23FE3 /* Profile */,
 				ADB313E1216C9E4400868ADF /* TabBar */,
 				AD1D54AD2160F59C00D23FE3 /* ActivityFeed */,
-				AD1D54AC2160F58B00D23FE3 /* Profile */,
 				AD1D54AB2160F57E00D23FE3 /* Photo */,
 				AD1D54AA2160F56B00D23FE3 /* Discover */,
 				AD1D54A92160F54A00D23FE3 /* UserFeed */,
@@ -148,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				AD1D549A215E685E00D23FE3 /* Profile.swift */,
+				ADFE51B221741DC90000D925 /* ImageCollectionViewCell.swift */,
+				ADFE51B42174230E0000D925 /* ImageFlowLayout.swift */,
+				ADFE51B6217427CC0000D925 /* HeaderCollectionReusableView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -295,11 +304,14 @@
 				AD1D5499215E657300D23FE3 /* ActivityFeed.swift in Sources */,
 				AD1D549B215E685E00D23FE3 /* Profile.swift in Sources */,
 				AD1D5487215E3CA000D23FE3 /* Discover.swift in Sources */,
+				ADFE51B7217427CC0000D925 /* HeaderCollectionReusableView.swift in Sources */,
 				AD1D5483215E3CA000D23FE3 /* AppDelegate.swift in Sources */,
 				AD1D549D2160BCF500D23FE3 /* SignIn.swift in Sources */,
+				ADFE51B321741DC90000D925 /* ImageCollectionViewCell.swift in Sources */,
 				AD1D549F2160CF2400D23FE3 /* SignUp.swift in Sources */,
 				AD1D5497215E40CC00D23FE3 /* Photo.swift in Sources */,
 				AD1D5485215E3CA000D23FE3 /* UserFeed.swift in Sources */,
+				ADFE51B52174230E0000D925 /* ImageFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

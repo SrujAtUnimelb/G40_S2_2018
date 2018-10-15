@@ -15,10 +15,9 @@ class UserFeed: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         navigationController?.isNavigationBarHidden = false
-        checkUserLoggedIn()
+        //checkUserLoggedIn()
     }
     
-    //
     func checkUserLoggedIn(){
         print("==== Checking for user Login")
         if Auth.auth().currentUser?.uid == nil {

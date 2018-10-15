@@ -104,9 +104,7 @@ class SignUp: UIViewController{
                         }else {
                             print("(uidDB.email!) - inserted into FirebaseDB")
                         }
-                    })
-                    
-                    
+                    })                    
                     
                     self.registrationStatusLabel.text = "Registration Succeeded, returning to Sign In page."
                     
